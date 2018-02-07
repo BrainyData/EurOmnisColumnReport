@@ -1,0 +1,37 @@
+
+;  the first time we come here we must calculate things
+If not(iRowsPerColumn)
+	;  calculate our row height from the section height
+	Calculate iRowHeight as pPrintPos.$height
+	;  calculate our local page width and height by getting the boundaries
+	Calculate pPrintPos.$posmode as kPosLocal     ;; this sets $posvertpage and $poshorzpage
+	Calculate pPrintPos.$posmode as kBndsLocal     ;; this sets $width and $height to the local area bounds
+	Calculate iLocalWidth as pPrintPos.$width
+	Calculate iLocalHeight as pPrintPos.$height
+	;  now we can calculate our column stuff
+	Calculate iRowsPerColumn as int(iLocalHeight/iRowHeight)
+	Calculate iColumnWidth as iLocalWidth/iColumnsPerPage
+End If
+
+;  calculate our sections position based on current row and column
+Calculate pPrintPos.$posmode as kPosLocal     ;; change our co-ordinate space to kPosLocal
+Calculate pPrintPos.$posvertpage as iCurPage     ;; make sure we are on the correct page
+Calculate pPrintPos.$left as iCurColumn*iColumnWidth     ;; calculate our co-ordinates
+Calculate pPrintPos.$top as iCurRow*iRowHeight
+Calculate pPrintPos.$width as iColumnWidth
+Calculate pPrintPos.$height as iRowHeight
+
+;  now we print the section
+Send to trace log {[pPrintPos.$posvertpage] / [pPrintPos.$left] / [pPrintPos.$top]}
+Do default
+
+;  after we print we must prepare for the next print
+Calculate iCurRow as iCurRow+1     ;; increment the row count
+If iCurRow=iRowsPerColumn     ;; if we have reached max rows
+	Calculate iCurRow as 0     ;; reset row
+	Calculate iCurColumn as iCurColumn+1     ;; increment the column count
+	If iCurColumn=iColumnsPerPage     ;; if we have reached max columns
+		Calculate iCurColumn as 0     ;; reset columns
+		Calculate iCurPage as iCurPage+1     ;; increment the page
+	End If
+End If

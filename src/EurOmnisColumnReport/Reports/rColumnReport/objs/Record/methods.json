@@ -1,0 +1,20 @@
+[
+	{
+		"name": "$print",
+		"ident": 0,
+		"order": 1,
+		"pvardefs": [
+			{
+				"name": "pPrintPos",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	}
+]

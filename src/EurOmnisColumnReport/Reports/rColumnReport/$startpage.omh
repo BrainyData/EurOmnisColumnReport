@@ -1,0 +1,4 @@
+
+;  just out of interest
+Send to trace log {$startpage([pPageNumber])}
+Do default

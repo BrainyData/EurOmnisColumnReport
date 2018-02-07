@@ -1,0 +1,30 @@
+{
+	"ident": 1024,
+	"order": 16386,
+	"objtype": "kText",
+	"properties": {
+		"align": "kLeftJst",
+		"backcolor": "kColorBackFill",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabelTitleSmall",
+		"font": 6,
+		"fontsize": 13,
+		"fontstyle": "kPlain",
+		"forecolor": "kColorForeFill",
+		"height": 25,
+		"left": 3,
+		"objlink": 0,
+		"text": {
+			"type": 14,
+			"calc": "Presenter: Michael Monschau (Brainy Data Limited)"
+		},
+		"textcolor": "kColorWindowText",
+		"top": 268,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 498
+	}
+}
