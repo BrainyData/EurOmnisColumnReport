@@ -1,2 +1,0 @@
-;  open window with introduction and examples button
-Do $windows.wndStartup.$open('.',kWindowCenter)
