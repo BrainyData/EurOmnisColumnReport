@@ -1,0 +1,280 @@
+{
+	"classtype": "kReport",
+	"internalversion": 6,
+	"designtaskname": "Startup_Task",
+	"nextident": 1009,
+	"lastgroupident": 0,
+	"usecms": true,
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iColumnsPerPage",
+			"order": 9,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "3",
+			"desc": "We want three columns"
+		},
+		{
+			"name": "iColumnWidth",
+			"order": 2,
+			"type": "kNumber",
+			"subtype": "k4dp",
+			"sublen": 0,
+			"desc": "Width of a column (initialized in first call to Record.$print)"
+		},
+		{
+			"name": "iCurColumn",
+			"order": 1,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "0",
+			"desc": "Current column on page starting at zero (initialized to 0)"
+		},
+		{
+			"name": "iCurPage",
+			"order": 7,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "1",
+			"desc": "Current Page (initialized to 1)"
+		},
+		{
+			"name": "iCurRow",
+			"order": 6,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "0",
+			"desc": "Current row on page starting at zero (initialized to 0)"
+		},
+		{
+			"name": "iLocalHeight",
+			"order": 4,
+			"type": "kNumber",
+			"subtype": "k4dp",
+			"sublen": 0,
+			"desc": "Our local area height (initialized in first call to Record.$print)"
+		},
+		{
+			"name": "iLocalWidth",
+			"order": 8,
+			"type": "kNumber",
+			"subtype": "k4dp",
+			"sublen": 0,
+			"desc": "Our local area width (initialized in first call to Record.$print)"
+		},
+		{
+			"name": "iRowHeight",
+			"order": 3,
+			"type": "kNumber",
+			"subtype": "k4dp",
+			"sublen": 0,
+			"desc": "Height of Record Section (initialized in first call to Record.$print)"
+		},
+		{
+			"name": "iRowsPerColumn",
+			"order": 5,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"desc": "How many rows will fit on page (initialized in first call to Record.$print)"
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"backcolor": "RGB(0,0,0)",
+		"backiconid": 0,
+		"backpattern": 15,
+		"backpicture": {
+			"$base64": ""
+		},
+		"bordercolor": "RGB(0,0,0)",
+		"borderpos": "kBordPosMargins",
+		"bottommargin": 1.001,
+		"callprintonexport": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"copies": 0,
+		"createdate": "2018-02-07 22:53:14",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"effect": "kBorderNone",
+		"exportformat": "kEXnone",
+		"external": true,
+		"forecolor": "RGB(0,0,0)",
+		"horzdpi": 0,
+		"horzgrid": 0.508,
+		"horzoffset": 0.0,
+		"horzpages": false,
+		"islabel": false,
+		"islist": false,
+		"issupercomponent": false,
+		"labelcount": 0,
+		"labelwidth": 0.0,
+		"leftmargin": 1.001,
+		"linestyle": 1,
+		"loadpagesetup": true,
+		"macosdestname": "",
+		"macosdesttype": "kPrinter",
+		"mainfile": "",
+		"mainlist": "",
+		"moddate": "2018-02-07 23:08:32",
+		"orientation": "kOrientDefault",
+		"pagesetupdata": {
+			"$base64": ""
+		},
+		"paper": "kPaDefault",
+		"paperlength": 0.0,
+		"paperwidth": 0.0,
+		"picturealign": "kPALtopLeft",
+		"recordspacing": 0.0,
+		"repeatfactor": 1,
+		"rightmargin": 1.001,
+		"scale": 0,
+		"showascheckedout": false,
+		"showgrid": true,
+		"shownames": false,
+		"sizetogrid": false,
+		"topmargin": 1.001,
+		"userinfo": "",
+		"version": "",
+		"vertdpi": 0,
+		"vertoffset": 0.0
+	},
+	"sortfields": [
+		{
+			"order": 1,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 2,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 3,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 4,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 5,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 6,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 7,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 8,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		},
+		{
+			"order": 9,
+			"properties": {
+				"dataname": "",
+				"descending": false,
+				"newpage": false,
+				"newpageinterval": 0.0,
+				"newpageintervalstart": 0.0,
+				"subtotalinterval": 0.0,
+				"subtotalintervalstart": 0.0,
+				"subtotals": false,
+				"upper": false
+			}
+		}
+	]
+}
